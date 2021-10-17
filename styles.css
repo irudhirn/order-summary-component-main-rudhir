@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background-image: url("images/pattern-background-mobile.svg");
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: var(--pale-blue);
+  /* height: 100vh; */
+}
+
+html {
+  /* Normally default font size 16px for most of the browsers. So 16px = 1rem, but it makes calculations difficult  */
+  font-size: 62.5%;
+  /* This makes 1rem = 10px, so the calculation becomes easy. Like 18px = 1.8rem, 33px = 3.3rem, etc. */
+}
+
+img {
+  height: 100%;
+  width: auto;
+}
+
+.container {
+  padding: 6.5rem 2rem;
+  margin: 0 auto;
+}
+
+.card {
+  border: none;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background-color: var(--very-pale-blue);
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.hero {
+  height: 17rem;
+  background-image: url("images/illustration-hero.svg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+main {
+  padding: 3rem 2rem;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.intro h1 {
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+
+.intro p {
+  color: var(--desaturated-blue);
+  /* text-align: center; */
+  padding: 0 1.8rem;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-weight: lighter;
+  font-size: 1.5rem;
+}
+
+.plans {
+  height: 4.6rem;
+  margin: 0 auto;
+  width: 25rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.plan {
+  width: 11rem;
+  margin: auto 0;
+}
+
+.plan h3 {
+  font-size: 1.5rem;
+  color: var(--dark-blue);
+}
+
+.plan p {
+  font-size: 1.5rem;
+  color: var(--desaturated-blue);
+}
+
+.change {
+  display: inline-block;
+  margin: auto 0;
+}
+
+.change a {
+  color: var(--bright-blue);
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.change:hover a,
+.change:active a {
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.7;
+  /* color: var(--pale-blue); */
+}
+
+/* .payment {
+  display: inline-block;
+  width: 100%;
+  background-color: var(--bright-blue);
+  text-align: center;
+  padding: 1.6rem 0;
+  border-radius: 1rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 2rem 1rem hsla(245, 75%, 52%, 0.1);
+} */
+
+.payment {
+  display: inline-block;
+  width: 100%;
+  background-color: var(--bright-blue);
+  text-align: center;
+  padding: 1.6rem 0;
+  border-radius: 1rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 2rem 1rem hsla(245, 75%, 52%, 0.1);
+  color: var(--very-pale-blue);
+  /* background-color: transparent; */
+  border: none;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.payment:hover,
+.payment:active {
+  cursor: pointer;
+  background-color: var(--bright-blue);
+  opacity: 0.7;
+}
+
+/* .payment button {
+  color: var(--very-pale-blue);
+  background-color: transparent;
+  border: none;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+} */
+
+.cancel {
+  text-align: center;
+}
+
+.cancel a {
+  text-decoration: none;
+  color: var(--desaturated-blue);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.cancel a:hover,
+.cancel a:active {
+  color: var(--dark-blue);
+}
+
+@media (min-width: 521px) {
+  body {
+    background-image: url("images/pattern-background-desktop.svg");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+
+  .container {
+    padding: 12rem 2rem;
+  }
+
+  .hero {
+    height: 22rem;
+  }
+
+  main {
+    padding: 4rem 5rem;
+  }
+
+  .intro h1 {
+    font-size: 2.6rem;
+  }
+
+  .intro p {
+    width: 33rem;
+    font-size: 1.6rem;
+  }
+
+  .plans {
+    height: 5rem;
+    width: 31rem;
+  }
+
+  .plan {
+    width: 16rem;
+  }
+
+  .plan h3 {
+    font-size: 1.6rem;
+  }
+}
